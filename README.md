@@ -26,41 +26,51 @@ Currently, there're only 12 total HTTP request / CRUD in the API
 
 ### PUT
 - http://localhost:3000/authors/:id
+
 Input in JSON raw :
+```json
 {
   "name" : "<update to this name>",
   "year_born"  : <update the author year born to this year>,
   "year_died"  : <update the author year died to this year>
 }
-
+```
 Note : All of input above is not mandatory, 
 For example 
+```json
 {
   "name" : "Tere Liye",
   "year_born"  : 1979
 }
-
+```
 Will still works
 
 
 
 ### DELETE
 - http://localhost:3000/users/:id/wishlist
+
 Input in JSON raw :
+```json
 {
   "book_id" : <delete the book with id "book_id" from wishlist of this user>
 } 
-
+```
 
 ### POST
 - http://localhost:3000/users/:id/wishlist
+
 Input in JSON raw : 
+```json
 {
   "book_id" : <add the book with id "book_id" to wishlist of this user>
 } 
+```
 
 - http://localhost:3000/books
+
 Input in JSON raw :
+```json
 {
   "publisher_name" : "<insert the publisher name>",
   "language" : "<insert the book language>",
@@ -71,16 +81,19 @@ Input in JSON raw :
   "pages" : <insert how much pages does the book have>,
   "price" : <insert the price in XXXXX.XX>
 }
+```
 Caution : All of the input is MANDATORY 
   
  
 - http://localhost:3000/ratings/:id
+
 Input in JSON raw :
+```json
 {
   "book_id" : <insert the book id that the user rate>,
   "rating" : <insert the rating in range 1 and 5>
 }
-
+```
 
 
 ## SQL 
